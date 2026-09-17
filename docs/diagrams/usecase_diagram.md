@@ -1,16 +1,17 @@
 ```mermaid
-usecaseDiagram
-    actor User
+flowchart LR
+    User([User])
 
-    rectangle "Smart Expense Splitter" {
-        usecase "Add Member" as UC1
-        usecase "Remove Member" as UC2
-        usecase "Add Expense" as UC3
-        usecase "Remove Expense" as UC4
-        usecase "View Net Balances" as UC5
-        usecase "Simplify Debts" as UC6
-        usecase "Save/Load Data" as UC7
-    }
+    subgraph "Smart Expense Splitter"
+        direction TB
+        UC1(Add Member)
+        UC2(Remove Member)
+        UC3(Add Expense)
+        UC4(Remove Expense)
+        UC5(View Net Balances)
+        UC6(Simplify Debts)
+        UC7(Save/Load Data)
+    end
 
     User --> UC1
     User --> UC2
@@ -20,6 +21,6 @@ usecaseDiagram
     User --> UC6
     User --> UC7
 
-    UC3 ..> UC5 : <<include>>
-    UC6 ..> UC5 : <<include>>
+    UC3 -. "<<include>>" .-> UC5
+    UC6 -. "<<include>>" .-> UC5
 ```

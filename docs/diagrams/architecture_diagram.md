@@ -1,14 +1,15 @@
 ```mermaid
-architecture-beta
-    group app(App)
+flowchart TD
+    subgraph App ["App"]
+        direction TB
+        main(Console Main)
+        gui(MainFrame GUI)
+        model(Model / Controller)
+        utils(Utilities)
+    end
     
-    service main(Console Main) in app
-    service gui(MainFrame GUI) in app
-    service model(Model / Controller) in app
-    service utils(Utilities) in app
+    main --> model
+    gui --> model
     
-    main:r --> model:l
-    gui:r --> model:l
-    
-    model:b --> utils:t
+    model --> utils
 ```
