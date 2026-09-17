@@ -138,4 +138,3 @@ While the current version provides a complete end-to-end solution, future iterat
 * **Data Visualization:** Adding graphical charts (pie charts, bar graphs) to visualize spending habits by category over time.
 
 ---
-*Conceptualized, designed, and developed as part of the VITyarthi Flipped Course Evaluation academic requirements.*
